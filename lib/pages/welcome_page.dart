@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -18,17 +19,81 @@ class WelcomePage extends StatelessWidget {
                 maxWidth: double.infinity,
                 minHeight: 0.0,
                 maxHeight: double.infinity,
-                child: Text(
-                  'Welcome to the Login Page',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
+                child: Image.asset(
+                  'assets/images/undraw_Balloons.png',
+                  height: 400.0,
+                  width: 300.0,
+                ),
+              ),
+
+              // Login Button
+              Positioned(
+                top: 500.0,
+                child: SizedBox(
+                  width: size.width * 0.7,
+                  child: ClipRRect(
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.purple),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
-              //  to overlap multiple widgets into a single screen
-              // the first widget is the bottommost item, and the last widget is the topmost item
+
+              // Sign in Button
+              Positioned(
+                top: 550.0,
+                child: SizedBox(
+                  width: size.width * 0.7,
+                  child: ClipRRect(
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.grey[400]),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Sign In',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              Positioned(
+                bottom: 528.0,
+                child: Text(
+                  'Welcome to Login Page',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
               Positioned(
                 // now we will give top & left set up 0 to go on the corner left site
                 top: 0.0,
