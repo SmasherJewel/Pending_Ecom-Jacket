@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import '../routs/rout_page.dart';
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({Key? key}) : super(key: key);
+class LoginPageBackground extends StatelessWidget {
+  const LoginPageBackground({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,31 @@ class WelcomePage extends StatelessWidget {
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
+
+              OverflowBox(
+                minWidth: 0.0,
+                maxWidth: double.infinity,
+                minHeight: 0.0,
+                maxHeight: double.infinity,
+                child: Text(
+                  'Login',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+                ),
+                
+              ),
+
+              Positioned(
+                // now we will give top & left set up 0 to go on the corner left site
+                top: 60.0,
+                left: 0.0,
+                child: Image.asset(
+                  'assets/images/Login.png',
+                  // to reduce the width size
+                  height: 400.0,
+                  width: 350.0,
+                ),
+              ),
+
               Positioned(
                 // now we will give top & left set up 0 to go on the corner left site
                 top: 0.0,
