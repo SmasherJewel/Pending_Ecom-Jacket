@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import '../routs/rout_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -42,7 +43,9 @@ class WelcomePage extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.purple),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRouts.loginPageRout);
+                      },
                       child: Text(
                         'Login',
                         style: TextStyle(
@@ -72,7 +75,7 @@ class WelcomePage extends StatelessWidget {
                       ),
                       onPressed: () {},
                       child: Text(
-                        'Sign In',
+                        'Sign Up',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
